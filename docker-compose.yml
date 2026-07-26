@@ -14,7 +14,7 @@ services:
     command: ["make", "dev"]
 
   db:
-    image: postgres:lastest
+    image: postgres:latest
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
