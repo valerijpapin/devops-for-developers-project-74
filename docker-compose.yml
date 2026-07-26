@@ -6,8 +6,11 @@ services:
       context: .
       dockerfile: Dockerfile.production
     image: valerijpapin/app_new
+    env_file:
+      - .env.example
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     command: ["make", "dev"]
 
   db:
